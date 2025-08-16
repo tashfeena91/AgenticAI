@@ -1,4 +1,4 @@
-# Agentic AI Projects
+# Agentic AI Projects 🚀
 
 This repository showcases my projects in building **Agentic AI systems** that move beyond simple prompts.  
 Each project demonstrates reasoning, tool usage, planning, and real-world execution.  
@@ -36,7 +36,7 @@ Each project has its own folder with notebooks and instructions.
 ---
 
 ## 🔗 About Me
-I specialize in building **Agentic AI systems** that act like digital teammates — creating, planning, and executing tasks.  
-- Upwork Profile: [Insert Link]  
-- GitHub: [Insert Link]  
-- Email: [Insert Email]  
+I specialize in building **Agentic AI systems** that act like digital teammates creating, planning, and executing tasks.  
+- Upwork Profile: [https://www.upwork.com/freelancers/~01ceb7b4f3f3149a9a] 
+- GitHub: [https://github.com/tashfeena91]  
+- Email: [tashfeen.a91@gmail.com]  
