@@ -1,0 +1,70 @@
+modules = ["python-3.11"]
+[agent]
+expertMode = true
+
+[nix]
+channel = "stable-25_05"
+packages = ["freetype", "glibcLocales", "gumbo", "harfbuzz", "jbig2dec", "libjpeg_turbo", "mupdf", "openjpeg", "swig", "xcbuild"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Install Dependencies"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "FastAPI Backend"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Streamlit Frontend"
+
+[[workflows.workflow]]
+name = "Install Dependencies"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pip install fastapi uvicorn streamlit crewai langchain-groq langfuse pymupdf docx2txt reportlab python-dotenv requests python-multipart"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow]]
+name = "FastAPI Backend"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
+waitForPort = 8000
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow]]
+name = "Streamlit Frontend"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "streamlit run streamlit_app.py --server.port 5000 --server.address 0.0.0.0"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[ports]]
+localPort = 5000
+externalPort = 5000
+
+[[ports]]
+localPort = 8000
+externalPort = 80

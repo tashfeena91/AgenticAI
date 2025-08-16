@@ -1,0 +1,20 @@
+[project]
+name = "repl-nix-workspace"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.11"
+dependencies = [
+    "crewai>=0.159.0",
+    "docx2txt>=0.9",
+    "fastapi>=0.116.1",
+    "groq>=0.31.0",
+    "langchain-groq>=0.3.7",
+    "langfuse>=3.2.4",
+    "pymupdf>=1.26.3",
+    "python-dotenv>=1.1.1",
+    "python-multipart>=0.0.20",
+    "reportlab>=4.4.3",
+    "requests>=2.32.4",
+    "streamlit>=1.48.1",
+    "uvicorn>=0.35.0",
+]
