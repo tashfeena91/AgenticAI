@@ -1,0 +1,5 @@
+crewai
+duckduckgo-search
+langfuse<3.0.0
+openai
+groq
